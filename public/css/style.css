@@ -1,0 +1,489 @@
+.all{
+width: 100%;
+height: auto;
+margin: 0 auto;
+}
+/**
+img {
+	width: 1000px;
+	height: 500px;
+}
+**/
+
+
+.footer{
+width: 100%;
+height: 300px;
+background-color: #99d6ff;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+padding: 2%;
+padding-left: 3%;
+color: white;
+font-size: 14pt;
+font-family: serif;
+}
+
+/**************media*******************/
+/**
+@media screen and (max-width: 900px){
+	.header{
+		background-color:red;
+	}
+}
+@media screen and (max-width: 300px){
+	.header{
+		background-color:yellow;
+	}
+}
+**/
+
+.menu{
+  width: 100%;
+  height: 67px;
+  font-size: 14pt;
+  font-family: serif;
+  color: white;
+background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #003d66;
+    background-color: rgb(0, 204, 204);
+    border-radius: 1px;
+    position: fixed;
+    z-index: 10;
+    font-size: 18pt;
+  font-family: serif;
+}
+
+
+.logo
+{
+font-family: serif;
+font-style: italic;
+color: red;
+opacity: 0.9;
+font-size: 18pt;
+text-align: left;
+}
+
+#text {
+	font-size: 14pt;
+	font-family: serif;
+	background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    text-shadow: 1px 1px 1px white; 
+
+}
+
+#text1 {
+	font-size: 20pt;
+	font-family: serif;
+	background-position: center;
+    background-repeat: no-repeat;
+    color: #191970;
+
+}
+
+h1 {
+   color: black;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+}
+
+
+/* GALLERY BOX, IMAGES ... */
+
+#box {
+	background-position: center;
+    background-repeat: no-repeat;	
+    width: 100%;
+    height: 300px;
+    padding-left: 2px;
+    padding-right: 2px;
+    z-index: 10;
+    border-radius: 7px;
+
+
+
+}
+
+#box img {
+width: 100%;
+height: 100%;
+position: absolute;
+}
+
+.box_text {
+    background-position: center;
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 40%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-bottom-left-radius: 4px ;
+    border-bottom-right-radius: 4px;
+     background-color: rgba(255, 255, 255, 0.7);
+  text-shadow: 1px 1px 1px white;   
+   color: black;
+    display: none;
+    cursor: pointer;
+
+
+}
+.box_toggle{
+  width: 100%;
+  margin-top: 3px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+   background-color: rgba(255, 255, 255, 0.7);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; 
+text-shadow: 1px 1px 1px white;
+cursor: pointer;
+
+
+}
+.box_gallery{
+  width: 40%;
+  height: 40px;
+  bottom: 0;
+  position: fixed;
+  margin: 4px;
+  padding: 4px;
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  font-size: 12pt;
+}
+
+/* GALLERY END  */
+#png {
+	background-position: center;
+    background-repeat: no-repeat;	
+    width: 30px;
+    height: 30px;
+    margin-left: 10%;
+    padding left: : 5%;
+}
+
+.text {
+	font-size: 14pt;
+	font-family: serif;
+	background-position: center;
+    background-repeat: no-repeat;	
+}
+
+
+
+/* Heder   */
+
+/* BOOTSTRAP 3.x GLOBAL STYLES
+-------------------------------------------------- */
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+.overlay { 
+  color:#fff;
+  position:absolute;
+  z-index:12;
+  top:40%;
+  left:0;
+  width:100%;
+  text-align:center;
+
+}
+
+
+/* NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+
+
+.navbar-inverse {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  height: 60px;
+  border-bottom: transparent;
+  color: white;
+  background-color: transparent;
+  padding-top: 15px;
+ 
+}
+
+
+.navbar-static-top {
+  z-index: 1000;
+  border-width: 0 0 2px;
+}
+
+.navigation{
+  position: relative;
+  width: 14.2%;
+  font-size: 18pt;
+  text-shadow: 1px 1px 1px blue;
+  font-family: serif;
+
+}
+
+a {
+  color: inherit;
+  
+}
+a:hover {
+  text-decoration: none;
+}
+#sign_up{
+   cursor: pointer;
+}
+
+
+
+@media (min-width: 768px) {
+  .navigation {
+    float: left;
+  }
+
+}
+
+#login {
+  width: 22%;
+  height: 300px;
+  padding: 10px;
+  float: right;
+ background-color: rgba(0, 204, 204, 0.9);
+  margin-right: 10px;
+  margin-top: 11px;
+  display: none;
+  border-radius: 7px;
+}
+
+#text-login{
+  border-bottom: 2px dotted blue;
+  text-shadow: 2px 2px 2px blue;
+  font-size: 12pt;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 1;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 630px;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 630px;
+}
+
+
+
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 800px) {
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+    margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+  }
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 1px;
+    
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+}
+
+/* Header  END */
+
+/* RESERVATION */
+
+
+
+
+.price {
+  border-radius: 6px;
+  width: 60px;
+  height: 32px;
+  color: #337ab7;
+  background-color: ;
+  font-size: 22px;
+  border-bottom: solid black;
+
+}
+
+.book_it {
+  border-radius: 5px;
+  width: 140px;
+  height: 40px;
+  color: white;
+  background-color: #337ab7;
+  font-size: 22px;
+}
+
+
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.hovereffect:hover .overlay {
+  background-color: rgba(170,170,170,0.4);
+}
+
+.hovereffect h2, .hovereffect img {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.hovereffect:hover img {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+
+
+.hovereffect a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2px 2px;
+  
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background-color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  font-weight: normal;
+  height: 95%;
+  width: 85%;
+  position: absolute;
+  top: -20%;
+  left: 8%;
+  padding: 1px;
+  font-size: 12pt;
+}
+
+.hovereffect:hover a.info {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  background-color: rgba(0,0,0,0.4);
+}
+
+
+/* RESERVATION END */
+
+/*REGISTRATION*/
+
+.reg_error{
+  width: 100%;
+  height: 20px;
+  color: red;
+  font-size: 12px;
+}
+.email_error{
+  width: 100%;
+  height: 20px;
+  color: red;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.info {
+  font-size: 22pt;
+  color: #99ccff;
+   text-shadow: 1px 1px 1px black;
+}
+
+
+/*REGISTRATION END*/
+
+
+/*CALENDAR*/
+.next {
+  background-image: url('../images/logo/right.png');
+}
+.prev{
+  background-image: url('../images/logo/left.png');
+}
+
+#book_it_info
+{
+color: #191970;
+}
+
+

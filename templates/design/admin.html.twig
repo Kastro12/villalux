@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}    Dashboard Template for Bootstrap {% endblock %}
+
+{% block stylesheets %}
+
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}"/>
+    <link href="{{ asset('css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Villa Lux</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><a href="#">Settings</a></li>
+           
+            <li><a href="#"><select style="color: black;" onchange="location = this.value;">
+              <option>Menu</option>
+              <option value="">Calendar</option>
+              <option value="">Reservations</option>
+              <option value="">Users</option>
+              <option value="">Gallery</option>
+              <option value="">Payments</option>
+            </select></a></li>
+             <li><a href="#">Profile</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+
+           
+              <ul class="nav nav-sidebar"> 
+                     
+                <li><a href="">Calendar</a></li>
+                <li><a href="">Reservations</a></li>
+                <li><a href="">Users</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Payments</a></li>
+                <li><a href="">Apartments</a></li>
+
+              </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+<br/><h1 class="page-header">ADMIN</h1>
+        <br/><br/>
+
+                       <!-- PROSTOR ZA ISPISIVANJE PODATAK -->
+
+
+
+
+
+
+
+
+    </div>
+
+{% endblock %}
+{% block javascripts %}
+
+    {{ parent() }}
+
+  <script src="{{ asset('js/ie-emulation-modes-warning.js') }}"></script>
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js') }}"></script>
+
+  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+  <script src="{{ asset('js/holder.min.js') }}"></script>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="{{ asset('js/ie10-viewport-bug-workaround.js') }}"></script>
+
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+{% endblock %}

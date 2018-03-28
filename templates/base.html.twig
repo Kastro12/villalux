@@ -1,0 +1,51 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %}Vila Draga {% endblock %}</title>
+
+	{% block stylesheets %}
+
+	
+	<link rel="stylesheet" type="text/css" href="{{ asset('js/fancybox/jquery.fancybox.css')}}"/>
+	<link rel="stylesheet" type="text/css" href="{{ asset('js/fancybox/jquery.fancybox.min.css')}}"/>
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}"/>
+	<link href="{{ asset('css/style.css')}}" rel="stylesheet"/>
+	<link rel="shortcut icon" href="{{ asset('/images/logo.png')}}" type="image/x-icon" />
+	<link rel="stylesheet" href="{{ asset('js/aos/dist/aos.css') }}" />
+	{% endblock %}
+</head>
+<body>
+
+	
+	<div class="all">
+
+
+
+	{% block body %}
+        {% include 'design/heder.html.twig' %}
+		{% include 'design/menu.html.twig' %}
+		{% include 'design/about.html.twig' %}
+		{% include 'design/gallery.html.twig' %}
+		{% include 'design/contact.html.twig' %}
+		{% include 'design/footer.html.twig' %}
+        
+
+	{% endblock %}
+	
+
+	</div>
+
+    {% block javascripts %}
+	<script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+	<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('js/myjs/custom.js') }}"></script>
+	<script src="{{ asset('js/myjs/heder.js') }}"></script>
+	<script src="{{ asset('js/aos/dist/aos.js') }}"></script>
+	<!-- Add fancyBox -->
+	<script src="{{ asset('js/fancybox/jquery.fancybox.js') }}"></script>
+{% endblock %}
+
+</body>
+</html>
