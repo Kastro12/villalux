@@ -22,11 +22,6 @@ use Symfony\Component\HttpFoundation\Response;
 class GalleryController extends AbstractController
 {
 
-    public function insertImage()
-    {
-
-    }
-
     /**
      * @Route("/images/json")
      * @Method("GET")
@@ -66,9 +61,24 @@ class GalleryController extends AbstractController
         $em->persist($gallery);
         $em->flush();
 
+        return new Response($d);
+    }
 
-        return new Response('Ovo ce raditi');
+    /**
+     * @Route("/admin/delete_img")
+     * @Method("POST")
+     */
+    public function deleteImg(Request $request)
+    {
+        $del = $request->getContent();
+        $data = json_decode($del,true);
 
+        $em = $this->getDoctrine()->getManager();
+        $gallery = $em->getRepository(Gallery::class)->find($data);
+        $em->remove($gallery);
+        $em->flush();
+
+        return new Response('Obrisano');
     }
 
 

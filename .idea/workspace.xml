@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22aa6206-d0f4-428a-8986-206cf72cf398" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vilalux.iml" afterPath="$PROJECT_DIR$/.idea/vilalux.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
-      <change beforePath="$PROJECT_DIR$/templates/design/admin.html.twig" afterPath="$PROJECT_DIR$/templates/design/admin.html.twig" />
+      <change beforePath="$PROJECT_DIR$/public/gallery/read-gallery.js" afterPath="$PROJECT_DIR$/public/gallery/read-gallery.js" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/GalleryController.php" afterPath="$PROJECT_DIR$/src/Controller/GalleryController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,45 +17,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="read-gallery.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/gallery/read-gallery.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="47" />
-              <folding>
-                <marker date="1523906007258" expanded="true" signature="326:339" ph="..." />
-                <marker date="1523906007258" expanded="true" signature="809:820" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
+            <state relative-caret-position="536">
               <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gallery.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Gallery.php">
+      <file leaf-file-name="create-gallery.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/gallery/create-gallery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1944">
-              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state relative-caret-position="-576">
+              <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create-gallery.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/gallery/create-gallery.js">
+      <file leaf-file-name="read-gallery.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/gallery/read-gallery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="83" column="31" lean-forward="false" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="456">
+              <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+              <folding>
+                <marker date="1523967057912" expanded="true" signature="1074:1087" ph="..." />
+                <marker date="1523967057912" expanded="true" signature="1516:1527" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,21 +53,11 @@
       <file leaf-file-name="GalleryController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/GalleryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="58" column="75" lean-forward="false" selection-start-line="58" selection-start-column="75" selection-end-line="58" selection-end-column="75" />
+            <state relative-caret-position="416">
+              <caret line="80" column="39" lean-forward="false" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
               <folding>
                 <element signature="e#120#143#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/design/admin.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2472">
-              <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -155,9 +130,9 @@
         <option value="$PROJECT_DIR$/templates/design/admin.html.twig" />
         <option value="$PROJECT_DIR$/public/app.js" />
         <option value="$PROJECT_DIR$/src/Entity/Gallery.php" />
-        <option value="$PROJECT_DIR$/public/gallery/read-gallery.js" />
-        <option value="$PROJECT_DIR$/src/Controller/GalleryController.php" />
         <option value="$PROJECT_DIR$/public/gallery/create-gallery.js" />
+        <option value="$PROJECT_DIR$/src/Controller/GalleryController.php" />
+        <option value="$PROJECT_DIR$/public/gallery/read-gallery.js" />
       </list>
     </option>
   </component>
@@ -245,7 +220,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="width" value="690" />
     <option name="height" value="688" />
@@ -392,18 +367,18 @@
       <workItem from="1522496376626" duration="14915000" />
       <workItem from="1522590434645" duration="7178000" />
       <workItem from="1523904721261" duration="18328000" />
-      <workItem from="1523954656272" duration="609000" />
+      <workItem from="1523954656272" duration="5370000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185077000" />
+    <option name="totallyTimeSpent" value="189838000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.100292824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2203514" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -434,7 +409,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/design/admin/admin_pages/reservation.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/Controller/Admin/CalendarAdminController.php" />
     <entry file="file://$PROJECT_DIR$/src/Controller/Admin/ApartmentAdminController.php" />
     <entry file="file://$PROJECT_DIR$/src/Form/UserRegistrationForm.php" />
@@ -623,56 +597,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/design/admin.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2472">
+        <state relative-caret-position="1242">
           <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="38" selection-end-line="103" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app.js">
+    <entry file="file://C:/viladraga/lib/gallery/db_image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="24">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1520881265467" expanded="true" signature="167:215" ph="SELECT * FRO... images" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Gallery.php">
+    <entry file="file://$PROJECT_DIR$/public/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state relative-caret-position="536">
+          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/GalleryController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="58" column="75" lean-forward="false" selection-start-line="58" selection-start-column="75" selection-end-line="58" selection-end-column="75" />
+        <state relative-caret-position="416">
+          <caret line="80" column="39" lean-forward="false" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
           <folding>
             <element signature="e#120#143#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/gallery/read-gallery.js">
+    <entry file="file://$PROJECT_DIR$/public/gallery/create-gallery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="47" />
-          <folding>
-            <marker date="1523906007258" expanded="true" signature="326:339" ph="..." />
-            <marker date="1523906007258" expanded="true" signature="809:820" ph="..." />
-          </folding>
+        <state relative-caret-position="-576">
+          <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/gallery/create-gallery.js">
+    <entry file="file://$PROJECT_DIR$/public/gallery/read-gallery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="83" column="31" lean-forward="false" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="456">
+          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <marker date="1523967057912" expanded="true" signature="1074:1087" ph="..." />
+            <marker date="1523967057912" expanded="true" signature="1516:1527" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
