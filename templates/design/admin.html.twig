@@ -47,14 +47,15 @@
         <div class="col-sm-3 col-md-2 sidebar">
 
            
-              <ul class="nav nav-sidebar"> 
-                     
-                <li><a href="">Calendar</a></li>
-                <li><a href="">Reservations</a></li>
-                <li><a href="">Users</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">Payments</a></li>
-                <li><a href="">Apartments</a></li>
+              <ul class="nav nav-sidebar">
+
+<button style="width: 170px" class="btn btn-info" id="calendar">Calendar</button><br/><br/>
+<button style="width: 170px" class="btn btn-info" id="reservations">Reservations</button><br/><br/>
+<button style="width: 170px" class="btn btn-info" id="users">Users</button><br/><br/>
+<button style="width: 170px" class="btn btn-info" id="gallery">Gallery</button><br/><br/>
+<button style="width: 170px" class="btn btn-info" id="payments">Payments</button><br/><br/>
+<button style="width: 170px" class="btn btn-info" id="apartments">Apartments</button><br/><br/>
+
 
               </ul>
         </div>
@@ -63,14 +64,18 @@
 
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-<br/><h1 class="page-header">ADMIN</h1>
-        <br/><br/>
+<br/>
+
+            <div id="app_html">
+
+
+
 
                        <!-- PROSTOR ZA ISPISIVANJE PODATAK -->
 
 
 
-
+            </div>
 
 
 
@@ -93,5 +98,11 @@
   <script src="{{ asset('js/ie10-viewport-bug-workaround.js') }}"></script>
 
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+    <script src="{{ asset('gallery/read-gallery.js') }}"></script>
+    <script src="{{ asset('gallery/create-gallery.js') }}"></script>
+    <script src="{{ asset('app.js') }}"></script>
+
+
 
 {% endblock %}
