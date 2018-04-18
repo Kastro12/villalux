@@ -17,6 +17,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request as Request;
 use Symfony\Component\HttpFoundation\Response;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Symfony\Bridge\Doctrine\RegistryInterface;
 
 
 class GalleryController extends AbstractController
@@ -74,11 +76,33 @@ class GalleryController extends AbstractController
         $data = json_decode($del,true);
 
         $em = $this->getDoctrine()->getManager();
-        $gallery = $em->getRepository(Gallery::class)->find($data);
+        $gallery = $em->getRepository(Gallery::class)
+            ->find($data);
         $em->remove($gallery);
         $em->flush();
 
         return new Response('Obrisano');
+    }
+
+    /**
+     * @Route("/gallery/img")
+     */
+    public function showImg(Request $request)
+    {
+        $c = $request->getContent();
+        $category=json_decode($c,true);
+
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $gal = $entityManager->getRepository(Gallery::class)
+            ->findBy(array(
+                'category'=>$category
+            ));
+
+
+
+        return $this->json($gal);
+
     }
 
 

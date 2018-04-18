@@ -24,9 +24,7 @@ $(document).ready(function () {
                     console.log('ne radi');
                 }
                 });
-
-             }
-                else
+             } else
              {
                  imgDel = undefined;
              }

@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}    Gallery {% endblock %}
+
+{% block stylesheets %}
+
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}"/>
+
+{% endblock %}
+
+{% block body %}
+
+    <style>
+        #slike{
+            width: 90%;
+            height: 250px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+<div class="all">
+    <input type="button" class="btn btn-primary" value="Back to homepage"
+           onclick="location.href='{{ path('homepage') }}'"/>
+<br/><br/><br/><br/><br/><br/>
+    <center>  Choose a gallery  </center>
+    <br/><br/>
+ <center>
+    <div id="gallery_button">
+    <button class="btn btn-warning" value="vila" data-category="villa" id="g_vila">Villa Lux</button>
+    <button class="btn btn-warning" value="ap" data-category="apartment" id="g_ap">Apartments</button>
+    <button class="btn btn-warning" value="trsteno" data-category="trsteno" id="g_trsteno"> Trsteno beach</button>
+    <button class="btn btn-warning" value="ploce" data-category="ploce" id="g_ploce">Ploce beach</button>
+    <button class="btn btn-warning" value="jaz" data-category="jaz" id="g_jaz">Jaz beach</button>
+    </div>
+ </center>
+  <br/>
+<div class="container">
+  <div id="show_gallery">
+                             <!-- PRIKAZ SLIKA -->
+
+
+
+  </div>
+</div>
+
+</div>
+{% endblock %}
+{% block javascripts %}
+
+    {{ parent() }}
+
+
+    <script src="{{ asset('gallery/show-gallery.js') }}"></script>
+
+
+
+{% endblock %}

@@ -30,4 +30,12 @@ class MainController extends AbstractController
         return $this->render('design/admin.html.twig');
     }
 
+    /**
+     * @Route("/gallery")
+     */
+    public function gallery()
+    {
+        return $this->render('server/gallery_db.html.twig');
+    }
+
 }

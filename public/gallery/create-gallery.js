@@ -59,10 +59,14 @@ $(document).ready(function () {
            var imgCategory = document.querySelector('#img_category');
            var imgText = document.querySelector('#img_text');
 
+           var imgFullName = imgCategory.value+'/'+imgName.value;
+            console.log(imgCategory.value);
+            console.log(imgName.value);
+            console.log(imgFullName);
 
 
                 imgArr.push({
-                    img_name:imgName.value,
+                    img_name:imgFullName,
                     category:imgCategory.value,
                     text:imgText.value
 
@@ -81,7 +85,7 @@ $(document).ready(function () {
                    contentType: 'aplication/json',
                    data: imgJson,
                    success: function (result) {
-                       alert('Successfully uploaded image')
+                       alert('Successfully uploaded image');
                    },
                    error: function (result) {
                        console.log('Error');
