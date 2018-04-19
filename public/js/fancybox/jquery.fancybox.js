@@ -3180,7 +3180,7 @@
 		metacafe : {
 			matcher : /metacafe.com\/watch\/(\d+)\/(.*)?/,
 			type    : 'iframe',
-			url     : '//www.metacafe.com/embed/$1/?ap=1'
+			url     : '//www.metacafe.com/embed/$1/?read_img=1'
 		},
 
 		dailymotion : {

@@ -37,7 +37,7 @@ $(document).ready(function () {
 function showGallery()
 {
 
-   $.getJSON('http://localhost:8000/images/json',function (data) {
+   $.getJSON('http://localhost:8000/admin/images/json',function (data) {
       var read_img="";
       //button form create new img
       read_img+="<div style='float: right;'>";

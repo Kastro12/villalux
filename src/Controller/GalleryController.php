@@ -8,9 +8,6 @@
 
 namespace App\Controller;
 
-
-
-
 use App\Entity\Gallery;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -25,7 +22,7 @@ class GalleryController extends AbstractController
 {
 
     /**
-     * @Route("/images/json")
+     * @Route("/admin/images/json")
      * @Method("GET")
      */
     public function readImage()

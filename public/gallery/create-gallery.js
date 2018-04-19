@@ -42,7 +42,7 @@ $(document).ready(function () {
        gallery_form+="<tr>";
        gallery_form+="<td></td>";
        gallery_form+="<td>";
-       gallery_form+="<button type='submit' id='submit' class='btn btn-primary'>";
+       gallery_form+="<button type='submit' id='create_gallery' class='btn btn-primary'>";
        gallery_form+="<span class='glyphicon glyphicon-plus'></span> Insert new image";
        gallery_form+="</button>";
        gallery_form+="</td>";
@@ -53,11 +53,17 @@ $(document).ready(function () {
 
        $('#show').html(gallery_form);
 
-       $(document).on('click','#submit',function (e) {
+       $(document).on('click','#create_gallery',function (e) {
            e.preventDefault();
            var imgName = document.querySelector('#img_name');
            var imgCategory = document.querySelector('#img_category');
            var imgText = document.querySelector('#img_text');
+
+           if(imgName.value ==="" || imgText.value ==="")
+           {
+               alert('Fill in all fild');
+               return false;
+           }
 
            var imgFullName = imgCategory.value+'/'+imgName.value;
             console.log(imgCategory.value);
