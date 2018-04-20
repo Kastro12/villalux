@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}    Gallery {% endblock %}
+
+{% block stylesheets %}
+
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}"/>
+    <link href="{{ asset('css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+{% block body %}
+
+
+
+    <div class="all">
+        <input type="button" class="btn btn-primary" value="Back to homepage"
+               onclick="location.href='{{ path('homepage') }}'"/>
+        <br/>
+        <center>  Reserve your apartment as soon as possible  </center>
+        <br/><br/>
+        <center>
+        <div id="reservation_form"> Mesto za rezervaciju </div>
+        </center>
+        <br/><br/><br/><br/>
+        <div class="container">
+            <div id="show_apartment">
+                <!-- PRIKAZ Apartmana -->
+        <div id="show_img" style="width: 30%; float: left">
+                    <!-- PRIKAZ SLIKA -->
+        </div>
+        <div id="show_info" style="width: 60%;float: right">
+                    <!-- PRIKAZ INFO -->
+        </div>
+
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+{% block javascripts %}
+
+    {{ parent() }}
+
+
+<script src="{{ asset('apartment/show-apartment.js') }}"></script>
+
+
+
+{% endblock %}

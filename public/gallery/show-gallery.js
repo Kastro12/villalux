@@ -13,7 +13,6 @@ $(document).ready(function () {
              success: function (data) {
                 console.log(data);
 
-
                 showImg(data);
              },
              error: function (result) {
@@ -41,7 +40,8 @@ $(document).ready(function () {
             }
             html += '</div>';
 
-          $('#show_gallery').html(html);
+         $('#show_gallery').html(html);
       }
+
 
 });

@@ -38,4 +38,12 @@ class MainController extends AbstractController
         return $this->render('server/gallery_db.html.twig');
     }
 
+    /**
+     * @Route("/book_it")
+     */
+    public function bookIt()
+    {
+        return $this->render('server/book_it.html.twig');
+    }
+
 }
