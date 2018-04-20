@@ -83,6 +83,7 @@ class GalleryController extends AbstractController
 
     /**
      * @Route("/gallery/img")
+     * @Method("POST")
      */
     public function showImg(Request $request)
     {

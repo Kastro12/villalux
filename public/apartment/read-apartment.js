@@ -39,7 +39,7 @@ function showApartment()
     ap+="<td>"+ val.name +"</td>";
     ap+="<td>"+ val.price +"</td>";
     ap+="<td>"+ val.text +"</td>";
-    ap+="<td><button class='btn btn-primary btn-sm' id='del_ap' value='"+ val.id +"'>Edit</button></td>";
+    ap+="<td><button class='btn btn-primary btn-sm' id='edit_ap' value='"+ val.id +"'>Edit</button></td>";
     ap+="<td><button class='btn btn-danger btn-sm' id='del_ap' value='"+val.id+"'>Delete</button></td>";
     ap+="</tr>";
     });

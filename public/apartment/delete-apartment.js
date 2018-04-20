@@ -11,11 +11,11 @@ $(document).ready(function () {
               contentType: 'aplication/json',
               data: idAp,
               success: function (data) {
-                  console.log('salje');
                   showApartment();
               },
               error: function (data) {
                   console.log('Error');
+                  return false;
               }
            });
 

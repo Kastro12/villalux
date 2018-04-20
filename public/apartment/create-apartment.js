@@ -10,19 +10,19 @@ $(document).ready(function () {
        // Ap name
        insert_ap+="<tr>";
        insert_ap+="<td>Apartment name</td>";
-       insert_ap+="<td><input type='text' id='ap_name' class='form-control' required/></td>";
+       insert_ap+="<td><input type='text' id='ap_name' class='form-control'/></td>";
        insert_ap+="</tr>";
 
        // Ap price per day
        insert_ap+="<tr>";
        insert_ap+="<td>Price per day € </td>";
-       insert_ap+="<td><input type='number' id='price' class='form-control' required/></td>";
+       insert_ap+="<td><input type='number' id='price' class='form-control'/></td>";
        insert_ap+="</tr>";
 
        // description field
        insert_ap+="<tr>";
        insert_ap+="<td>Text</td>";
-       insert_ap+="<td><textarea id='ap_text' class='form-control' required></textarea></td>";
+       insert_ap+="<td><textarea id='ap_text' class='form-control'></textarea></td>";
        insert_ap+="</tr>";
 
        // button to submit form
@@ -78,6 +78,7 @@ $(document).ready(function () {
                },
                error: function (data) {
                    console.log('Ne salje');
+                   return false;
                }
 
             });

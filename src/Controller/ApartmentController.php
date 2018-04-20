@@ -28,12 +28,11 @@ class ApartmentController extends AbstractController
     $apartment=$em->getRepository('App:Apartment')
         ->findAll();
 
-    $dat = [
+    $data = [
         'apartment' =>$apartment
     ];
 
-    return $this->json($dat);
-
+    return $this->json($data);
     }
 
     /**
@@ -81,6 +80,53 @@ class ApartmentController extends AbstractController
 
 
         return new Response('delete success');
+    }
+
+    /**
+     * @Route("/admin/apartment/{id}")
+     * @Method("GET")
+     */
+    public function readOneAp($id)
+    {
+        $data = json_decode($id);
+
+        $em = $this->getDoctrine()->getManager();
+        $apId = $em->getRepository(Apartment::class)
+            ->findOneBy(array(
+                'id' => $data
+            ));
+        return $this->json($apId);
+    }
+
+    /**
+     * @Route("/admin/apartment/{id}")
+     * @Method("POST")
+     */
+    public function updateAp(Request $request, $id)
+    {
+        $idData = json_decode($id);
+        $ap = $request->getContent();
+        $data = json_decode($ap,true);
+
+       $em = $this->getDoctrine()->getManager();
+       $updateAp = $em->getRepository(Apartment::class)
+           ->find($idData);
+
+       if (!$updateAp)
+       {
+            throw $this->createNotFoundException('No product found for id '.$idData);
+       }
+
+       foreach ($data as $row)
+       {
+           $updateAp->setName($row['name']);
+           $updateAp->setPrice($row['price']);
+           $updateAp->setText($row['text']);
+       }
+        $em->flush();
+
+
+        return $this->json($row);
     }
 
 }
