@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}    Gallery {% endblock %}
+
+{% block stylesheets %}
+
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}"/>
+    <link href="{{ asset('css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+{% block body %}
+
+
+
+    <div class="all">
+        <input type="button" class="btn btn-primary" value="Back to homepage"
+               onclick="location.href='{{ path('homepage') }}'"/>
+        <br/>
+        <center>   Make Reservation  </center>
+        <br/><br/><br/><br/>
+        <div class="container">
+            <div id="registration">
+
+fsfa
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+{% block javascripts %}
+
+    {{ parent() }}
+
+
+
+
+
+
+{% endblock %}
