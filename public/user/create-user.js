@@ -103,18 +103,4 @@ $(document).ready(function () {
 
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });

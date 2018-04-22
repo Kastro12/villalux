@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Sale
  * Date: 4/20/2018
- * Time: 1:43 PM
+ * Time: 11:56 PM
  */
 
 namespace App\Entity;
@@ -18,7 +18,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User implements UserInterface
 {
-
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -27,53 +26,29 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",columnDefinition="VARCHAR(100) NOT NULL")
      */
     private $firstName;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",columnDefinition="VARCHAR(100) NOT NULL")
      */
     private $lastName;
 
     /**
-     * @ORM\Column(type="string", unique=true)
+     * @ORM\Column(type="string",columnDefinition="VARCHAR(100) NOT NULL")
      */
     private $email;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string",columnDefinition="VARCHAR(100) NOT NULL")
      */
     private $phone;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", columnDefinition="VARCHAR(100) NOT NULL")
      */
     private $password;
-
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
 
     /**
      * @param mixed $firstName
@@ -81,14 +56,6 @@ class User implements UserInterface
     public function setFirstName($firstName): void
     {
         $this->firstName = $firstName;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getLastName()
-    {
-        return $this->lastName;
     }
 
     /**
@@ -100,14 +67,6 @@ class User implements UserInterface
     }
 
     /**
-     * @return mixed
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
      * @param mixed $email
      */
     public function setEmail($email): void
@@ -116,27 +75,11 @@ class User implements UserInterface
     }
 
     /**
-     * @return mixed
-     */
-    public function getPhone()
-    {
-        return $this->phone;
-    }
-
-    /**
      * @param mixed $phone
      */
     public function setPhone($phone): void
     {
         $this->phone = $phone;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPassword()
-    {
-        return $this->password;
     }
 
     /**
@@ -149,22 +92,27 @@ class User implements UserInterface
 
     public function getRoles()
     {
-        // TODO: Implement getRoles() method.
+        return ['ROLE_USER'];
+    }
+
+    public function getPassword()
+    {
+
     }
 
     public function getSalt()
     {
-        // TODO: Implement getSalt() method.
+
     }
 
     public function getUsername()
     {
-        // TODO: Implement getUsername() method.
+        return $this->email;
     }
 
     public function eraseCredentials()
     {
-        // TODO: Implement eraseCredentials() method.
+
     }
 
 
