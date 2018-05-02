@@ -88,12 +88,17 @@ $(document).ready(function () {
         $.ajax({
             url:'http://localhost:8000/registration/user',
             method:'POST',
-            contentType:'aplication/json',
+            contentType:'application/json',
             data:jsonUserArr,
             success: function (data) {
-                console.log('success');
-                alert('Welcome '+ data);
-               window.location.replace('http://localhost:8000');
+                if(data == 'Postojeci email')
+                {
+                    alert(data);
+                    window.location.reload();
+                }else {
+                    alert('Welcome ' + data);
+                    window.location.replace('http://localhost:8000');
+                }
             },
             error: function (data) {
                 console.log('error');

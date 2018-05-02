@@ -32,12 +32,33 @@ class UserController extends AbstractController
     public function userRegistration(Request $request, UserPasswordEncoderInterface $encoder)
     {
 
+        $show = "";
+
         $jsonData = $request->getContent();
         $data = json_decode($jsonData,true);
 
-       $user = new User();
+        $entityManager = $this->getDoctrine()->getManager();
+        $u = $entityManager->getRepository(User::class)
+            ->findAll();
+
+        $userArray =[];
+
+        foreach ($u as $allUser)
+        {
+            array_push($userArray,$allUser->getEmail());
+        }
+
+
+
+        $user = new User();
        foreach($data as $row)
        {
+
+        if(in_array($row['email'],$userArray))
+        {
+            $show = "Postojeci email";
+            return $this->json($show);
+        }
 
            $encoded = $encoder->encodePassword($user, $row['password']);
 
@@ -52,7 +73,9 @@ class UserController extends AbstractController
        $em->persist($user);
        $em->flush();
 
-       return $this->json($row['first_name']);
+       $show = $row['first_name'];
+
+       return $this->json('Welcome'.$show);
     }
 
 }

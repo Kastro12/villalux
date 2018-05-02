@@ -12,9 +12,10 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
+
 /**
  * @ORM\Entity
- * @ORM\Table(name="user")
+ * @ORM\Table(name="ap_user")
  */
 class User implements UserInterface
 {
@@ -26,29 +27,39 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string",columnDefinition="VARCHAR(100) NOT NULL")
+     * @ORM\Column(type="string", length=100)
      */
     private $firstName;
 
     /**
-     * @ORM\Column(type="string",columnDefinition="VARCHAR(100) NOT NULL")
+     * @ORM\Column(type="string", length=100)
      */
     private $lastName;
 
     /**
-     * @ORM\Column(type="string",columnDefinition="VARCHAR(100) NOT NULL")
+     * @ORM\Column(type="string", length=100, unique=true)
      */
     private $email;
 
     /**
-     * @ORM\Column(type="string",columnDefinition="VARCHAR(100) NOT NULL")
+     * @ORM\Column(type="string", length=100)
      */
     private $phone;
 
     /**
-     * @ORM\Column(type="string", columnDefinition="VARCHAR(100) NOT NULL")
+     * @ORM\Column(type="string", length=100)
      */
     private $password;
+
+    
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
 
     /**
      * @param mixed $firstName
@@ -90,6 +101,49 @@ class User implements UserInterface
         $this->password = $password;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+
+
+
     public function getRoles()
     {
         return ['ROLE_USER'];
@@ -97,7 +151,7 @@ class User implements UserInterface
 
     public function getPassword()
     {
-
+        return $this->password;
     }
 
     public function getSalt()

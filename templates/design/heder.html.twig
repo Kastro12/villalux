@@ -19,19 +19,14 @@
                   <div class="navigation"><a href="#about">About us</a></div>
                   <div class="navigation"><a href="#gallery">Gallery</a></div>
                   <div class="navigation"><a href="#contact">Contact as</a></div>
-                  <div class="navigation"><a href="#">Book it</a></div>
-                  <div class="navigation" id='sign_up'>
-                 Login
-                  
-                  </div>
+                  <div class="navigation"><a href="{{ path('book_it') }}">Book it</a></div>
 
-          <div id="login">
+                    {% if is_granted('ROLE_USER') %}
+                        <div class="navigation"><a href="{{ path('logout') }}">Logout</a></div>
+                    {% else %}
+                        <div class="navigation"><a href="{{ path('login') }}">Login</a></div>
+                    {% endif %}
 
-
-
-            {% include 'design/login.html.twig' %}
-
-          </div>
         </div>
 
     </div>

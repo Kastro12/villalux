@@ -39,11 +39,21 @@ class MainController extends AbstractController
     }
 
     /**
-     * @Route("/book_it")
+     * @Route("/book_it", name="book_it")
      */
     public function bookIt()
     {
         return $this->render('server/book_it.html.twig');
     }
+
+    /**
+     * @Route("/registration", name="registration")
+     */
+    public function registration()
+    {
+        return $this->render('server/registration.html.twig');
+    }
+
+
 
 }

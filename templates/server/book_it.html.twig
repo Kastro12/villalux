@@ -13,17 +13,29 @@
 
 {% block body %}
 
-
-
-    <div class="all">
-        <input type="button" class="btn btn-primary" value="Back to homepage"
+        <input style="float: left" type="button" class="btn btn-primary" value="Back to homepage"
                onclick="location.href='{{ path('homepage') }}'"/>
-        <br/>
-        <center>  Reserve your apartment as soon as possible  </center>
-        <br/><br/>
-        <center>
-        <div id="reservation_form"> Mesto za rezervaciju </div>
-        </center>
+
+
+
+        <br/><br/><br/><br/><br/>
+
+
+    {% if is_granted('ROLE_USER') %}
+        <center><div id="reservation_form">
+
+
+                Mesto za rezervaciju
+
+
+            </div></center>
+    {% else %}
+        <center><div id="reservation_info">
+                <div class="alert alert-danger">To book an apartment, please <a href="{{ path('login') }}"> login</a> first!</div>
+        </div></center>
+    {% endif %}
+
+
         <br/><br/><br/><br/>
         <div class="container">
             <div id="show_apartment">
@@ -39,7 +51,7 @@
             </div>
         </div>
 
-    </div>
+
 {% endblock %}
 {% block javascripts %}
 

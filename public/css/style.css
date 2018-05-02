@@ -338,7 +338,12 @@ a:hover {
 
 /* RESERVATION */
 
-
+#reservation_info {
+    border-radius: 20px;
+    width: 80%;
+    color: black;
+    font-size: 22px;
+}
 
 
 .price {
