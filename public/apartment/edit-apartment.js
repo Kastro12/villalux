@@ -38,7 +38,7 @@ $(document).ready(function () {
             $.ajax({
                url: 'http://localhost:8000/admin/apartment/'+editAp,
                method: 'POST',
-               contentType: 'aplication/json',
+               contentType: 'application/json',
                data: jsonAp,
                success: function (data) {
                    alert('Success updated. New name: ' +data['name']+' New price: '+data['price']);

@@ -71,7 +71,7 @@ $(document).ready(function () {
             $.ajax({
                url: 'http://localhost:8000/admin/insert_apartment',
                method: 'POST',
-                contentType: 'aplication/json',
+                contentType: 'application/json',
                data: apJson,
                success: function (data) {
                    alert('Success insert new Apartment!');
