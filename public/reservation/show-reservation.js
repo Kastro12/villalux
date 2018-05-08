@@ -35,18 +35,19 @@ $(document).ready(function () {
 
         // DUGME ZA REZERVACIJU
     html += '<div class="col-sm-2"><br/>';
-    html += '<button class=" btn btn-dark btn-lg" type="submit" id="reserve">Book it</button></div>';
+    html += '<button class=" btn btn-dark btn-lg" type="button" id="reserve">Book it</button></div>';
     html += '</form>';
     html += '</div>';
+
 
     $('#reservation_form').html(html);
 
         // DATAPICKER STOJI ODMA ISPOD ISPISIVANJA FORME
 
 
-
     });
     var email = document.querySelector('#email').value;
+
 
         // NA KLIK DUGMETA ZA REZERVACIJU
    $(document).on('click','#reserve',function (e) {
@@ -58,46 +59,81 @@ $(document).ready(function () {
        var price = document.querySelector('#pricePerDay').value;
        var reservationArr =[];
 
-       if( dateIn > dateOut)
+            var d1 = new Date(dateIn);
+            var d11 = d1.getTime();
+            var d2 = new Date(dateOut);
+            var d22 = d2.getTime();
+            var numDay =  Math.round((d22-d11)/(60*60*24)/1000);
+            var fullPrice = numDay*price;
+
+       if( dateIn >= dateOut)
        {
-           alert('Greska - dan odlaska upisan posle dana dolaska');
+           alert('Greska prilikom unosa datuma');
            return false;
        }
 
+    if(confirm(ap + ' booked from '+dateIn+' to '+dateOut+'. Total price '+fullPrice+'€. We wll call you on the phone to confirm your reservation.')) {
+
         var date = new Date();
-        var b_year =date.getFullYear();
-        var b_Month =("0" + (date.getMonth() + 1)).slice(-2); // +1 to zero based month
-        var b_date =("0" + date.getDate()).slice(-2);
-        var currentDay = (b_year +'-'+b_Month+'-'+b_date );
+        var b_year = date.getFullYear();
+        var b_Month = ("0" + (date.getMonth() + 1)).slice(-2); // +1 to zero based month
+        var b_date = ("0" + date.getDate()).slice(-2);
+        var currentDay = (b_year + '-' + b_Month + '-' + b_date);
 
-               reservationArr.push({
-               date_in: dateIn,
-               date_out: dateOut,
-               reservation_day: currentDay,
-               apartment: ap,
-               reservation_price: price,
-               user: email
-            });
+        reservationArr.push({
+            date_in: dateIn,
+            date_out: dateOut,
+            reservation_day: currentDay,
+            apartment: ap,
+            reservation_price: price,
+            user: email
+        });
 
-           var jsonArr = JSON.stringify(reservationArr);
+        var jsonArr = JSON.stringify(reservationArr);
 
-                 $.ajax({
-                    url: 'http://localhost:8000/reserve',
-                    method: 'POST',
-                    contentType: 'application/json',
-                    data: jsonArr,
-                    success: function (data) {
-                        console.log('salje');
-                    },
-                    error: function (data) {
-                        console.log('error')
-                        }
-                 });
+        $.ajax({
+            url: 'http://localhost:8000/reserve',
+            method: 'POST',
+            contentType: 'application/json',
+            data: jsonArr,
+            success: function (data) {
+                checkingData(data);
+            },
+            error: function (data) {
+                console.log('error')
+            }
+        });
+
+    }
    });
 
 
 
 
 
+
+
 });
+
+function checkingData(d)
+{
+    if(typeof d==='object')
+    {
+    var text = "";
+    var x;
+
+    for(x in d)
+    {
+        text += d[x] + ' ';
+    }
+    alert('Whoops!!! In the period of your reservation('+text+'), the apartment is ' +
+        'already reserved. See other apartments whether they are free during this' +
+        ' period or choose the second day of your stay.');
+
+    }
+    else
+    {
+        window.location.replace('http://localhost:8000');
+    }
+}
 

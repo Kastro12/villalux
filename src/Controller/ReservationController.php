@@ -15,7 +15,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Validator\Constraints\Date;
+
 
 
 class ReservationController extends AbstractController
@@ -30,6 +30,45 @@ class ReservationController extends AbstractController
             // PODACI IZ FORME
         $d = $request->getContent();
         $data = json_decode($d,true);
+        $apartment = $data[0]['apartment'];
+
+                //pravljenje niza unesenih datuma
+                $arrF = [];
+                $din = new \DateTime($data[0]['date_in']);
+                $out = new \DateTime($data[0]['date_out']);
+                $interval = \DateInterval::createFromDateString('1 day');
+                $period = new \DatePeriod($din,$interval,$out);
+                foreach ($period as $dpOne)
+                {
+                    array_push($arrF,$dpOne->format('Y-m-d'));
+                }
+
+
+            //DATUMI IZ BAZE
+        $entityManager = $this->getDoctrine()->getManager();
+        $reserve = $entityManager->getRepository(Reservation::class)
+            ->findBy(array('apartment'=>$apartment,'status'=>1));
+        $dateFromBase = [];
+        foreach ($reserve as $r)
+        {
+            $fd = $r->getDateIn();
+            $sd = $r->getDateOut();
+
+            $interval = \DateInterval::createFromDateString('1 day');
+            $period = new \DatePeriod($fd,$interval,$sd);
+
+            foreach ($period as $oneDay)
+            {
+                array_push($dateFromBase,$oneDay->format('Y-m-d'));
+            }
+        }
+            //UPOREDjIVANJE DATUMA IZ BAZE I UNOSA
+
+        $comparison = array_intersect($arrF,$dateFromBase);
+        if(!empty($comparison))
+        {
+            return $this->json($comparison);
+        }
 
 
             // RACUNANJE UKUPNE CENE
@@ -54,7 +93,7 @@ class ReservationController extends AbstractController
         $em->persist($reservation);
         $em->flush();
 
-        return new Response('Success created');
+        return new Response('Success!');
 
     }
 
@@ -89,9 +128,10 @@ class ReservationController extends AbstractController
 
              array_push($arrDate,$dt->format('Y-m-d'));
         }
+        array_push($arrDate,$lastDay->format('Y-m-d'));
 
     }
-     //   dump($arrDate);die;
+
 
 
      return $this->json($arrDate);

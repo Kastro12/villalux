@@ -42,7 +42,6 @@ function calendar()
     data: jsonAp,
     success: function (data) {
 
-        console.log(data);
         initComponent(data);
 
     },
@@ -75,14 +74,16 @@ function initComponent(availableDates){
 
             var dmy = (b_year +"-"+b_Month+"-"+ b_date );
 
-            if ($.inArray(dmy, availableDates) < 0) {
 
-                return [true,"","Book Now"];
-            } else {
 
-                return [false,"","Booked Out"];
+                if ($.inArray(dmy, availableDates) == -1) {
 
-            }
+                    return [true, "", "Book Now"];
+                } else {
+
+                    return [false, "", "Booked Out"];
+
+                }
 
 
      }
