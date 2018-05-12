@@ -11,7 +11,6 @@ $(document).ready(function () {
              dataType: 'json',
              data:j,
              success: function (data) {
-                console.log(data);
 
                 showImg(data);
              },

@@ -60,10 +60,8 @@ $(document).ready(function () {
             text:apText.value
            });
 
-           console.log(apArr);
-
            var apJson = JSON.stringify(apArr);
-           console.log(apJson);
+
            apName.value="";
            price.value="";
            apText.value="";

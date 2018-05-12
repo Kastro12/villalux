@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}"/>
     <link href="{{ asset('css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+
+
+
 {% endblock %}
 
 {% block body %}
@@ -29,7 +32,6 @@
            
             <li><a href="#"><select style="color: black;" onchange="location = this.value;">
               <option>Menu</option>
-              <option value="">Calendar</option>
               <option value="">Reservations</option>
               <option value="">Users</option>
               <option value="">Gallery</option>
@@ -49,7 +51,7 @@
            
               <ul class="nav nav-sidebar">
 
-<button style="width: 170px" class="btn btn-info" id="calendar">Calendar</button><br/><br/>
+
 <button style="width: 170px" class="btn btn-info" id="reservation">Reservations</button><br/><br/>
 <button style="width: 170px" class="btn btn-info" id="user">Users</button><br/><br/>
 <button style="width: 170px" class="btn btn-info" id="gallery">Gallery</button><br/><br/>
@@ -75,12 +77,15 @@
 
 
 
+
             </div>
 
 
 
-
     </div>
+
+
+
 
 {% endblock %}
 {% block javascripts %}
@@ -102,14 +107,30 @@
 
     <script src="{{ asset('app.js') }}"></script>
                   <!-- GALLERY-->
-    <script src="{{ asset('gallery/read-gallery.js') }}"></script>
-    <script src="{{ asset('gallery/create-gallery.js') }}"></script>
+    <script src="{{ asset('admin_gallery/read-gallery.js') }}"></script>
+    <script src="{{ asset('admin_gallery/create-gallery.js') }}"></script>
                 <!-- APARTMENT -->
-    <script src="{{ asset('apartment/read-apartment.js') }}"></script>
-    <script src="{{ asset('apartment/create-apartment.js') }}"></script>
-    <script src="{{ asset('apartment/delete-apartment.js') }}"></script>
-    <script src="{{ asset('apartment/edit-apartment.js') }}"></script>
-
+    <script src="{{ asset('admin_apartment/read-apartment.js') }}"></script>
+    <script src="{{ asset('admin_apartment/create-apartment.js') }}"></script>
+    <script src="{{ asset('admin_apartment/delete-apartment.js') }}"></script>
+    <script src="{{ asset('admin_apartment/edit-apartment.js') }}"></script>
+                <!-- RESERVATION -->
+    <script src="{{ asset('admin_reservation/read-reservation.js') }}"></script>
+    <script src="{{ asset('admin_reservation/new-reservation.js') }}"></script>
+    <script src="{{ asset('admin_reservation/show-confirmed-reservation.js') }}"></script>
+    <script src="{{ asset('admin_reservation/delete-reservation.js') }}"></script>
+    <script src="{{ asset('admin_reservation/confirm-reservation.js') }}"></script>
+                <!-- USER -->
+    <script src="{{ asset('admin_user/read-user.js') }}"></script>
+    <script src="{{ asset('admin_user/confirmed-user.js') }}"></script>
+    <script src="{{ asset('admin_user/reservation-user.js') }}"></script>
+    <script src="{{ asset('admin_user/no-reservation-user.js') }}"></script>
+                <!-- PAYMENT -->
+    <script src="{{ asset('admin_payment/read-payment.js') }}"></script>
+    <script src="{{ asset('admin_payment/no-settled-debts.js') }}"></script>
+    <script src="{{ asset('admin_payment/settled-debts.js') }}"></script>
+    <script src="{{ asset('admin_payment/new-payment.js') }}"></script>
+    <script src="{{ asset('admin_payment/update-payment.js') }}"></script>
 
 
 {% endblock %}

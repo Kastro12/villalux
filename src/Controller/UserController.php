@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity()
  * @ORM\Table(name="user_controller")
  */
 class UserController extends AbstractController
@@ -77,5 +77,6 @@ class UserController extends AbstractController
 
        return $this->json('Welcome'.$show);
     }
+
 
 }

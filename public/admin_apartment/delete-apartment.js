@@ -8,7 +8,7 @@ $(document).ready(function () {
            $.ajax({
               url: 'http://localhost:8000/admin/delete_apartment',
               method: 'POST',
-              contentType: 'aplication/json',
+              contentType: 'application/json',
               data: idAp,
               success: function (data) {
                   showApartment();

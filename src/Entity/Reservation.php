@@ -43,7 +43,6 @@ class Reservation
      *
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="email")
      * @ORM\JoinColumn(nullable=false)
-     * @ORM\Column(type="string")
      */
     private $user;
 
@@ -62,7 +61,36 @@ class Reservation
     /**
      * @ORM\Column(type="integer", options={"default" : 0})
      */
+    private $paid;
+
+    /**
+     * @ORM\Column(type="integer", options={"default" : 0})
+     */
     private $status;
+
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+
+    public function getPaid()
+    {
+        return $this->paid;
+    }
+
+
+    public function setPaid($paid): void
+    {
+        $this->paid = $paid;
+    }
 
 
     public function getApartment()
@@ -82,7 +110,7 @@ class Reservation
     }
 
 
-    public function setUser($user): void
+    public function setUser(User $user)
     {
         $this->user = $user;
     }

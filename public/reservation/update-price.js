@@ -41,7 +41,7 @@ function calendar()
     contentType: 'application/json',
     data: jsonAp,
     success: function (data) {
-
+        console.log(data);
         initComponent(data);
 
     },
@@ -76,7 +76,7 @@ function initComponent(availableDates){
 
 
 
-                if ($.inArray(dmy, availableDates) == -1) {
+                if ($.inArray(dmy, availableDates) < 0) {
 
                     return [true, "", "Book Now"];
                 } else {
