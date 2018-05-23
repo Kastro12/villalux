@@ -8,7 +8,7 @@ $(document).ready(function () {
 
 function showApartment()
 {
-    $.getJSON('http://localhost:8000/admin/apartment/json',function (data) {
+    $.getJSON('http://localhost:8000/apartment/apartment/json',function (data) {
 
 
     var ap = '';

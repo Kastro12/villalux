@@ -22,84 +22,81 @@ class Gallery
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
-     */private $id;
-
-    /**
-     * @ORM\Column(type="string")
-     */private $imgName;
-
-    /**
-     * @ORM\Column(type="string")
-     */private $category;
-
-
-    /**
-     * @ORM\Column(type="string")
-     */private $text;
-
-    /**
-     * @return mixed
      */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $imgName;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $category;
+
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $imgInfo;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Apartment")
+     */
+     private $ap;
+
+    public function getAp()
+    {
+        return $this->ap;
+    }
+
+    public function setAp(Apartment $ap): void
+    {
+        $this->ap = $ap;
+    }
+
+
+
+
     public function getId()
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     */
     public function setId($id): void
     {
         $this->id = $id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getImgName()
     {
         return $this->imgName;
     }
 
-    /**
-     * @param mixed $imgName
-     */
     public function setImgName($imgName): void
     {
         $this->imgName = $imgName;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCategory()
     {
         return $this->category;
     }
 
-    /**
-     * @param mixed $category
-     */
     public function setCategory($category): void
     {
         $this->category = $category;
     }
 
-
-    /**
-     * @return mixed
-     */
-    public function getText()
+    public function getImgInfo()
     {
-        return $this->text;
+        return $this->imgInfo;
     }
 
-    /**
-     * @param mixed $text
-     */
-    public function setText($text): void
+    public function setImgInfo($imgInfo): void
     {
-        $this->text = $text;
+        $this->imgInfo = $imgInfo;
     }
 
 }

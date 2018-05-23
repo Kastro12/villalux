@@ -75,7 +75,7 @@ class UserController extends AbstractController
 
        $show = $row['first_name'];
 
-       return $this->json('Welcome'.$show);
+       return $this->json($show);
     }
 
 

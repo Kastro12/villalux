@@ -30,7 +30,6 @@ class Apartment
 
     /**
      * @ORM\Column(type="string", length=100)
-     * @ORM\OneToMany(targetEntity="App\Entity\Reservation", mappedBy="apartment")
      */
     private $name;
 
@@ -43,6 +42,9 @@ class Apartment
      * @ORM\Column(type="string")
      */
     private $text;
+
+
+
 
 
 

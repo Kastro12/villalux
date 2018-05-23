@@ -1,46 +1,34 @@
 $(document).ready(function () {
 
       $(document).on('click','.btn-warning',function () {
-         var k = $(this).attr('data-category');
-         var j = JSON.stringify(k);
+          var c = $(this).attr('data-category');
 
-         $.ajax({
-             url:'http://localhost:8000/gallery/img',
-             method:'POST',
-             contentType: 'aplication/json',
-             dataType: 'json',
-             data:j,
-             success: function (data) {
+          $.getJSON('http://localhost:8000/gallery/img',function (data) {
 
-                showImg(data);
-             },
-             error: function (result) {
-                 console.log('greska');
+              var html = '';
+              html += '<div class="container">';
+                $.each(data, function (key, val) {
+             if(val.category === c) {
+                 html += '<a href="/images/' + val.imgName + '" data-fancybox="group">';
+                 html += '<div class="col-sm-4">';
+                 html += '<div class="fancybox">';
+                 html += '<div id="images_apartments">';
+                 html += '<img src="/images/' + val.imgName + '" class="img-responsive" />';
+                 html += '</div></div></div>';
+                 html += '</a>';
              }
-         })
+                });
+
+               html += '</div>';
+              $('#show_gallery').html(html);
+
+          });
 
     });
 
 
-      function showImg(g)
-      {
-
-          html ='';
-            html += '<div class="row">';
-            for(var i = 0;i<g.length;i++)
-            {
-
-                html += '<div class="col-sm-4">';
-                html += '<div id="slike">';
-                html += '<img src="/images/'+ g[i]["imgName"] +'" class="img-responsive"/>';
-                html += '</div>';
-                html += '</div>';
-
-            }
-            html += '</div>';
-
-         $('#show_gallery').html(html);
-      }
 
 
 });
+
+

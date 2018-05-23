@@ -16,7 +16,7 @@ $(document).ready(function () {
                 contentType: 'aplication/json',
                 data: imgDel,
                 success: function (result) {
-                    console.log('poslato');
+
                     showGallery();
 
                 },
@@ -29,7 +29,7 @@ $(document).ready(function () {
                  imgDel = undefined;
              }
 
-         })
+         });
    });
 });
 

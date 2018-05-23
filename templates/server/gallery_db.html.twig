@@ -1,26 +1,35 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}    Gallery {% endblock %}
+{% block title %}Gallery{% endblock %}
 
 {% block stylesheets %}
-
     {{ parent() }}
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}"/>
-
 {% endblock %}
 
 {% block body %}
-
-
-
-<div class="all">
-    <input type="button" class="btn btn-primary" value="Back to homepage"
+    <div id="topG">
+     <div class="col-sm-4">
+    <input type="button" class="btn btn-default" value="Homepage"
            onclick="location.href='{{ path('homepage') }}'"/>
+         <input type="button" class="btn btn-default" value="Book it!"
+                onclick="location.href='{{ path('book_it') }}'"/>
+     </div>
+     <div class="col-sm-3">
+
+         <div class="logo" style="float: right">See our gallery</div>
+     </div>
+     <div class="col-sm-5">
+         Phone: +38132223332&nbsp;&nbsp;&nbsp;&nbsp;Fax: +38132223332&nbsp;&nbsp;&nbsp;&nbsp;Email: info@vilalux.net
+     </div>
+
+    </div>
+
 <br/><br/><br/><br/><br/><br/>
-    <center>  Choose a gallery  </center>
-    <br/><br/>
+
+
  <center>
-    <div id="gallery_button">
+     <div id="gallery_button"><b>Choose gallery by category:</b>
     <button class="btn btn-warning" value="vila" data-category="villa" id="g_vila">Villa Lux</button>
     <button class="btn btn-warning" value="ap" data-category="apartment" id="g_ap">Apartments</button>
     <button class="btn btn-warning" value="trsteno" data-category="trsteno" id="g_trsteno"> Trsteno beach</button>
@@ -33,20 +42,17 @@
   <div id="show_gallery">
                              <!-- PRIKAZ SLIKA -->
 
-
-
   </div>
 </div>
 
-</div>
+
+
 {% endblock %}
 {% block javascripts %}
 
     {{ parent() }}
 
-
-    <script src="{{ asset('gallery/show-gallery.js') }}"></script>
-
-
+    <script src="{{ asset('admin_gallery/show-gallery.js') }}"></script>
+    <script src="{{ asset('admin_gallery/show-all-img.js') }}"></script>
 
 {% endblock %}

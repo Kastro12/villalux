@@ -25,14 +25,13 @@
 
 
 	{% block body %}
-        {% include 'design/heder.html.twig' %}
-		{% include 'design/menu.html.twig' %}
-		{% include 'design/about.html.twig' %}
-		{% include 'design/gallery.html.twig' %}
-		{% include 'design/contact.html.twig' %}
-		{% include 'design/footer.html.twig' %}
-        
-
+              {% include 'design/heder.html.twig' %}
+              {% include 'design/menu.html.twig' %}
+              {% include 'design/about.html.twig' %}
+			  {% include 'design/reserve.html.twig' %}
+              {% include 'design/gallery.html.twig' %}
+			  {% include 'design/contact.html.twig' %}
+			  {% include 'design/footer.html.twig' %}
 	{% endblock %}
 	
 
@@ -45,6 +44,8 @@
 	<script src="{{ asset('js/myjs/heder.js') }}"></script>
 	<script src="{{ asset('js/aos/dist/aos.js') }}"></script>
 	<script src="{{ asset('js/jquery-ui.js') }}"></script>
+	<script src="{{ asset('js/parallax.js') }}"></script>
+
 
 
 	<!-- Add fancyBox -->

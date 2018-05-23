@@ -14,7 +14,7 @@
         </div>
         <div class="navbar-collapse collapse">
           
-                  <div class="navigation" class="text1"><a href="{{ path('homepage') }}"> Vila Lux</a></div>
+                  <div class="navigation" id="text1">Villa Lux</div>
                   <div class="navigation"><a href="#home">Home</a></div>
                   <div class="navigation"><a href="#about">About us</a></div>
                   <div class="navigation"><a href="#gallery">Gallery</a></div>
@@ -24,7 +24,7 @@
                     {% if is_granted('ROLE_USER') %}
                         <div class="navigation"><a href="{{ path('logout') }}">Logout</a></div>
                     {% else %}
-                        <div class="navigation"><a href="{{ path('login') }}">Login</a></div>
+                        <div class="navigation"><a href="{{ path('login') }}">Login/Register</a></div>
                     {% endif %}
 
         </div>

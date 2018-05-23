@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	$(window).on("scroll", function(){
-		if($(window).scrollTop() > 585) {
+		if($(window).scrollTop() > 610) {
  		$('.navbar-inverse').css({
  			"background-color": "rgba(0, 204, 204, 0.9)",
  				

@@ -1,7 +1,6 @@
 .all{
 width: 100%;
-height: auto;
-margin: 0 auto;
+
 }
 /**
 img {
@@ -10,20 +9,39 @@ img {
 }
 **/
 
-
 .footer{
 width: 100%;
-height: 300px;
-background-color: #99d6ff;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+height: auto;
+    background-color: #999999;
+    position: absolute;
+    color: white;
+    font-size: 14pt;
+    font-family: serif;
+    text-shadow: 1px 1px 1px blue;
+}
 
-padding: 2%;
-padding-left: 3%;
-color: white;
-font-size: 14pt;
-font-family: serif;
+
+.copyright{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    background-color: #262626;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13pt;
+    color: lightyellow;
+
+}
+
+#png {
+    width: 30px;
+    height: 30px;
+}
+
+.text {
+    font-size: 14pt;
+    font-family: serif;
+
 }
 
 /**************media*******************/
@@ -53,29 +71,26 @@ background-position: center;
     border-radius: 1px;
     position: fixed;
     z-index: 10;
-    font-size: 18pt;
-  font-family: serif;
 }
 
 
 .logo
 {
-font-family: serif;
-font-style: italic;
-color: red;
-opacity: 0.9;
-font-size: 18pt;
-text-align: left;
+    margin: 10px;
+    font-family: serif;
+    font-style: italic;
+    color: white;
+    opacity: 0.9;
+    font-size: 26pt;
+    text-align: left;
+    text-shadow: 1px 1px 1px blue;
 }
 
 #text {
 	font-size: 14pt;
 	font-family: serif;
-	background-position: center;
-    background-repeat: no-repeat;
     color: black;
-    text-shadow: 1px 1px 1px white; 
-
+    text-shadow: 1px 1px 1px white;
 }
 
 #text1 {
@@ -84,7 +99,6 @@ text-align: left;
 	background-position: center;
     background-repeat: no-repeat;
     color: #191970;
-
 }
 
 h1 {
@@ -97,18 +111,26 @@ h1 {
 
 /* GALLERY BOX, IMAGES ... */
 
+#topG {
+    width: 100%;
+    height: 85px;
+    background-color: #1b6d85;
+    color: white;
+    font-size: 11pt;
+    position: absolute;
+    top: 0;
+}
+
 #box {
 	background-position: center;
-    background-repeat: no-repeat;	
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 300px;
     padding-left: 2px;
     padding-right: 2px;
     z-index: 10;
     border-radius: 7px;
-
-
-
 }
 
 #box img {
@@ -117,49 +139,6 @@ height: 100%;
 position: absolute;
 }
 
-.box_text {
-    background-position: center;
-    background-repeat: no-repeat; 
-    width: 100%;
-    height: 40%;
-    padding-left: 5%;
-    padding-right: 5%;
-    border-bottom-left-radius: 4px ;
-    border-bottom-right-radius: 4px;
-     background-color: rgba(255, 255, 255, 0.7);
-  text-shadow: 1px 1px 1px white;   
-   color: black;
-    display: none;
-    cursor: pointer;
-
-
-}
-.box_toggle{
-  width: 100%;
-  margin-top: 3px;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 30px;
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: black;
-   background-color: rgba(255, 255, 255, 0.7);
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px; 
-text-shadow: 1px 1px 1px white;
-cursor: pointer;
-
-
-}
-.box_gallery{
-  width: 40%;
-  height: 40px;
-  bottom: 0;
-  position: fixed;
-  margin: 4px;
-  padding: 4px;
-}
 
 .btn-warning {
   color: #fff;
@@ -169,32 +148,27 @@ cursor: pointer;
 }
 
 /* GALLERY END  */
-#png {
-	background-position: center;
-    background-repeat: no-repeat;	
-    width: 30px;
-    height: 30px;
-    margin-left: 10%;
-    padding left: : 5%;
-}
 
-.text {
-	font-size: 14pt;
-	font-family: serif;
-	background-position: center;
-    background-repeat: no-repeat;	
-}
 
+/* CONTACT FORM  */
+
+
+    #contact_form{
+        border-radius: 5px;
+        height: 380px;
+        font-family: serif;
+        background-color: #f2f2f2;
+        margin-left: 5px;
+        padding: 4%;
+        color: #191970;
+    }
 
 
 /* Heder   */
 
 /* BOOTSTRAP 3.x GLOBAL STYLES
 -------------------------------------------------- */
-body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
-}
+
 
 .overlay { 
   color:#fff;
@@ -204,6 +178,8 @@ body {
   left:0;
   width:100%;
   text-align:center;
+  font-size: 30pt;
+  text-shadow: 2px 2px 2px black;
 
 }
 
@@ -215,7 +191,7 @@ body {
 
 
 .navbar-inverse {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -225,9 +201,7 @@ body {
   color: white;
   background-color: transparent;
   padding-top: 15px;
- 
 }
-
 
 .navbar-static-top {
   z-index: 1000;
@@ -240,21 +214,28 @@ body {
   font-size: 18pt;
   text-shadow: 1px 1px 1px blue;
   font-family: serif;
+}
+
+.navigation a{
+    text-decoration-line: none;
+}
+
+.navigation a:visited{
+    color: white;
+}
+
+.navigation a:hover {
+    color: wheat;
 
 }
 
-a {
-  color: inherit;
-  
+.navigation a:active{
+    color: wheat;
 }
-a:hover {
-  text-decoration: none;
-}
+
 #sign_up{
    cursor: pointer;
 }
-
-
 
 @media (min-width: 768px) {
   .navigation {
@@ -296,7 +277,7 @@ a:hover {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 630px;
+  height: 663px;
 }
 .carousel img {
   position: absolute;
@@ -338,6 +319,17 @@ a:hover {
 
 /* RESERVATION */
 
+
+
+#apartment_text{
+    border-radius: 20px;
+    height: 220px;
+    padding: 10px;
+    color: black;
+    font-size: 18px;
+
+}
+
 #reservation_info {
     border-radius: 20px;
     width: 80%;
@@ -345,13 +337,17 @@ a:hover {
     font-size: 22px;
 }
 
+#reservation_form {
+    border-radius: 14px;
+    background-color:#d1e0d9;
+    padding: 8px;
+}
 
-.price {
+.price{
   border-radius: 6px;
   width: 60px;
   height: 32px;
   color: #337ab7;
-  background-color: ;
   font-size: 22px;
   border-bottom: solid black;
 
@@ -366,16 +362,16 @@ a:hover {
   font-size: 22px;
 }
 
-
-
 .hovereffect {
   width: 100%;
-  height: 100%;
+  height: 260px;
   float: left;
   overflow: hidden;
   position: relative;
   text-align: center;
   cursor: default;
+  margin-bottom: 4px;
+  border-radius: 7px;
 }
 
 .hovereffect .overlay {
@@ -393,9 +389,10 @@ a:hover {
   background-color: rgba(170,170,170,0.4);
 }
 
-.hovereffect h2, .hovereffect img {
+.hovereffect h4, .hovereffect img {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+    color: black;
 }
 
 .hovereffect img {
@@ -404,6 +401,7 @@ a:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+
 }
 
 .hovereffect:hover img {
@@ -417,8 +415,6 @@ a:hover {
 .hovereffect a.info {
   display: inline-block;
   text-decoration: none;
-  padding: 2px 2px;
-  
   color: #fff;
   border: 1px solid #fff;
   margin: 50px 0 0 0;
@@ -434,7 +430,7 @@ a:hover {
   height: 95%;
   width: 85%;
   position: absolute;
-  top: -20%;
+  top: -8%;
   left: 8%;
   padding: 1px;
   font-size: 12pt;
@@ -474,6 +470,13 @@ a:hover {
    text-shadow: 1px 1px 1px black;
 }
 
+#login_form{
+    border-radius: 5px;
+    background-color: #e6f3ff;
+    margin: 20px;
+    padding: 10px;
+}
+
 
 /*REGISTRATION END*/
 
@@ -505,14 +508,59 @@ color: #191970;
 
 
 /*  SLIKE U GALERIJI I U BOOK IT */
- #slike{
-     width: 90%;
-     height: 250px;
+ #images_apartments {
+     width: 100%;
+     height: 200px;
  }
+
+ #images_apartments img {
+     width: 100%;
+     height: 95%;
+     border-radius: 5px;
+     border: darkorange;
+ }
+
 img {
     width: 100%;
     height: 100%;
 }
 
+#ap_img {
+    width: 100%;
+    height: 200px;
+}
+
+#ap_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: darkorange;
+}
+
+/*  RESERVE IMAGES PARALLAX */
 
 
+.parallax-window {
+    min-height: 500px;
+    background: transparent;
+    padding: 40px;
+}
+
+#reserveText {
+    padding-top: 120px;
+    padding-left: 20px;
+    font-family: raleway;
+    font-size: 50px;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+}
+
+.btnReserve {
+    background-color: transparent;
+    color: white;
+    border-width: 2px;
+    border-color: white;
+    font-weight: bold;
+    font-size: 16pt;
+    text-shadow: 1px 1px 1px black;
+}

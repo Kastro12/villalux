@@ -13,35 +13,37 @@
 
 {% block body %}
 
-
-
     <div class="all">
 
-        <input type="button" class="btn btn-primary" value="Back to homepage"
-               onclick="location.href='{{ path('homepage') }}'"/>
-        <center><div> <div id="info"> Login  </div>   </center>
-        <br/>
+        {% include 'server/hederS.html.twig' %}
+        <br/><br/><br/><br/>
         <div class="container">
-
-
             {% if error %}
                 <div class="alert alert-danger">
                 {#    {{ error.messageKey|trans(error.messageData, 'security') }} #}
                     {{ error.message | replace({"Bad credentials." : "Invalid username or password."}) }}
                 </div>
             {% endif %}
+        <div class="col-sm-3"></div>
+            <div class="col-sm-6" id="login_form">
+                <b id="text1">Login</b>
+                <br/><br/><br/>
                 {{ form_start(form) }}
                     {{ form_row(form._username) }}
                     {{ form_row(form._password) }}
                     {{ form_widget(form._token) }}
 
-                <button type="submit" class="btn btn-success btn-lg">login</button>
+                <button type="submit" class="btn btn-primary btn-lg">login</button>
                 {{ form_end(form) }}
             <br/>
-            <a href="{{ path('registration') }}">If you do not have account, make it now.</a>
+                <b><a href="{{ path('registration') }}">If you do not have account,<u> make it now.</u></a></b>
 
+
+            </div>
+            <div class="col-sm-3"></div>
         </div>
     </div>
+
 {% endblock %}
 
 

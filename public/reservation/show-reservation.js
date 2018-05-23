@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
             // ISPISIVANJE FORME ZA REZERVACIJU
-    $.getJSON('http://localhost:8000/admin/apartment/json', function (data) {
+    $.getJSON('http://localhost:8000/apartment/apartment/json', function (data) {
         var html_ap = '';
         html_ap += '<select class="form-control" id="choose_ap" onchange="rezInfo()">';
         html_ap += '<option>...</option>';
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
         // DUGME ZA REZERVACIJU
     html += '<div class="col-sm-2"><br/>';
-    html += '<button class=" btn btn-dark btn-lg" type="button" id="reserve">Book it</button></div>';
+    html += '<button class=" btn btn-primary btn-lg" type="button" id="reserve">Book it</button></div>';
     html += '</form>';
     html += '</div>';
 
@@ -46,8 +46,8 @@ $(document).ready(function () {
 
 
     });
-    var email = document.querySelector('#email').value;
 
+    var email = $('#email').data('value');
 
         // NA KLIK DUGMETA ZA REZERVACIJU
    $(document).on('click','#reserve',function (e) {

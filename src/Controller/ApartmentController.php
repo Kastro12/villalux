@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Response;
 class ApartmentController extends AbstractController
 {
     /**
-     * @Route("/admin/apartment/json")
+     * @Route("/apartment/apartment/json")
      * @Method("GET")
      */
     public function readApartment()

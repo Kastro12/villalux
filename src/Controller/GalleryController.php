@@ -83,24 +83,16 @@ class GalleryController extends AbstractController
 
     /**
      * @Route("/gallery/img")
-     * @Method("POST")
+     * @Method("GET")
      */
-    public function showImg(Request $request)
+    public function showImg()
     {
-        $c = $request->getContent();
-        $category=json_decode($c,true);
-
 
         $entityManager = $this->getDoctrine()->getManager();
         $gal = $entityManager->getRepository(Gallery::class)
-            ->findBy(array(
-                'category'=>$category
-            ));
-
-
+            ->findAll();
 
         return $this->json($gal);
-
     }
 
 

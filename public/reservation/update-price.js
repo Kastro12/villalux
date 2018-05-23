@@ -12,7 +12,7 @@ function rezInfo()
 function takePrice() {
     var selectAp = $('#choose_ap option:selected').val();
 
-    $.getJSON('http://localhost:8000/admin/apartment/json',function (data) {
+    $.getJSON('http://localhost:8000/apartment/apartment/json',function (data) {
 
         $.each(data.apartment, function (key, val) {
            if(selectAp === val.name)
@@ -41,7 +41,7 @@ function calendar()
     contentType: 'application/json',
     data: jsonAp,
     success: function (data) {
-        console.log(data);
+
         initComponent(data);
 
     },

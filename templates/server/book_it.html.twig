@@ -1,59 +1,69 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}    Gallery {% endblock %}
+{% block title %}Reservation{% endblock %}
 
 {% block stylesheets %}
-
     {{ parent() }}
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}"/>
     <link href="{{ asset('css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
     <link href="{{ asset('css/datepicker.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css')}}" rel="stylesheet"/>
     <link href="{{ asset('js/jquery-ui.css') }}" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet" />
-
+    <link rel="stylesheet" href="{{ asset('js/aos/dist/aos.css') }}" />
 {% endblock %}
 
 {% block body %}
+    <div id="topG">
+    <div class="col-sm-2">
+    <input type="button" class="btn btn-info" value="Back to homepage"
+           onclick="location.href='{{ path('homepage') }}'"/>
+    </div>
+    <div class="col-sm-7">
+        Phone: +38132223332&nbsp;&nbsp;&nbsp;&nbsp;Fax: +38132223332&nbsp;&nbsp;&nbsp;&nbsp;Email: info@vilalux.net
+    </div>
+    <div class="col-sm-3"><div class="logo">Villa Lux</div></div>
 
-        <input style="float: left" type="button" class="btn btn-primary" value="Back to homepage"
-               onclick="location.href='{{ path('homepage') }}'"/>
-
-
-
+    </div>
         <br/><br/><br/><br/><br/>
 
-
     {% if is_granted('ROLE_USER') %}
+        <div class="container">
         <center><div id="reservation_form">
 
-          <input type="hidden" id="email" value={{ app.user.username }}>
+          <input type="hidden" id="email" data-value={{ app.user.username }}>
 
-
-
-            </div></center>
+            </div></center></div>
     {% else %}
         <center><div id="reservation_info">
                 <div class="alert alert-danger">To book an apartment, please <a href="{{ path('login') }}"> login</a> first!</div>
         </div></center>
     {% endif %}
-
-
-        <br/><br/><br/><br/>
         <div class="container">
-            <div id="show_apartment">
-                <!-- PRIKAZ Apartmana -->
-        <div id="show_img" style="width: 30%; float: left">
-                    <!-- PRIKAZ SLIKA -->
-        </div>
-        <div id="show_info" style="width: 60%;float: right">
-                    <!-- PRIKAZ INFO -->
-        </div>
+            <div id="apartment_text"><br/><br/>
+
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the
+                1500s, when an unknown printer took a galley of type and scrambled it
+                to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining essentially
+                unchanged.
+
 
 
             </div>
         </div>
+    <div class="container-fluid">
+        <div class="col-sm-12">
+        <div id="dr"></div>
+        </div>
+    </div>
+
+<br/><br/><br/>
+
+    {% include 'design/footer.html.twig' %}
+
+
+
 {% endblock %}
 {% block javascripts %}
 
@@ -64,13 +74,11 @@
 
     <script src="{{ asset('reservation/show-reservation.js') }}"></script>
     <script src="{{ asset('reservation/update-price.js') }}"></script>
-<script src="{{ asset('js/jquery-ui.js') }}"></script>
-<script src="{{ asset('admin_apartment/show-apartment.js') }}"></script>
-
+    <script src="{{ asset('js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('admin_apartment/show-apartment.js') }}"></script>
 
     <script type="text/javascript">
-        $('#d_in').datepicker();
+        AOS.init();
     </script>
-
 
 {% endblock %}

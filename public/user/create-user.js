@@ -91,7 +91,7 @@ $(document).ready(function () {
             contentType:'application/json',
             data:jsonUserArr,
             success: function (data) {
-                if(data == 'Postojeci email')
+                if(data === 'Account with this email already exists')
                 {
                     alert(data);
                     window.location.reload();
